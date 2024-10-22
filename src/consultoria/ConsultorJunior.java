@@ -10,7 +10,7 @@ public class ConsultorJunior extends Consultor {
     protected boolean ascenso;
 
 
-    public ConsultorJunior(String dni, String nombre, String apellido, double sueldo, GregorianCalendar fechaContratacion, ConsultorSenior supervisor, boolean ascenso) {
+    public ConsultorJunior(String dni, String nombre, String apellido, double sueldo, GregorianCalendar fechaContratacion, ConsultorSenior supervisor) {
         super(dni, nombre, apellido, sueldo, fechaContratacion);
 
         this.supervisor = supervisor;
@@ -38,7 +38,18 @@ public class ConsultorJunior extends Consultor {
 
     public void cambiarSupervisor(ConsultorSenior nuevoSupervisor) {
 
-        supervisor = nuevoSupervisor;
+        if (this.supervisor != null) {
+
+            this.supervisor.eliminarSupervisado();
+        }
+
+        this.supervisor = nuevoSupervisor;
+
+
+        if (supervisor != null) {
+
+            supervisor.añadirSupervisado();
+        }
 
 
     }
