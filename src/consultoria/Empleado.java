@@ -52,9 +52,14 @@ public class Empleado {
         return fechaContratacion;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
     public void setFechaContratacion(GregorianCalendar fechaContratacion) {
         this.fechaContratacion = fechaContratacion;
     }
+
 
     @Override
     public String toString() {
