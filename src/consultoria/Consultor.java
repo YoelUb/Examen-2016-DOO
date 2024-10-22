@@ -18,6 +18,7 @@ public class Consultor extends Empleado {
         return area;
     }
 
+
     public void setArea(String area) {
         this.area = area;
     }
