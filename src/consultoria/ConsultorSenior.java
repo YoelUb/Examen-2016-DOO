@@ -8,8 +8,8 @@ public class ConsultorSenior extends Consultor {
     protected int supervisados;
 
 
-    public ConsultorSenior(String dni, String nombre, String apellido, double sueldo, GregorianCalendar fechaContratacion, double complemento, int supervisados) {
-        super(dni, nombre, apellido, sueldo, fechaContratacion);
+    public ConsultorSenior(String dni, String nombre, String apellido, double sueldo, GregorianCalendar fechaContratacion, double complemento, int supervisados, String area) {
+        super(dni, nombre, apellido, sueldo, fechaContratacion, area);
 
         this.complemento = complemento;
         this.supervisados = supervisados;
@@ -34,11 +34,13 @@ public class ConsultorSenior extends Consultor {
 
     public void añadirSupervisado() {
 
-        if (supervisados > 5) {
+        if (supervisados >= 5) {
 
             throw new RuntimeException("No puede haber más de cinco supervisados ");
 
         }
+
+        supervisados++;
 
 
     }
@@ -50,6 +52,7 @@ public class ConsultorSenior extends Consultor {
             throw new RuntimeException("No se puede eliminar porque no hay supervisados");
 
         }
+        supervisados--;
 
     }
 

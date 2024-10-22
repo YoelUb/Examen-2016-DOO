@@ -65,7 +65,7 @@ public class Empleado {
     public String toString() {
 
 
-        return String.format("DNI: " + dni + "\nNombre de empleado: " + nombre + "\nApellido: " + apellido + "\nSueldo: " + sueldo + " €" + "\nFecha de Contratacacion: " + fechaContratacion.getTime() + "\n---------------------------------------------------------");
+        return String.format("\nDNI: " + dni + "\nNombre de empleado: " + nombre + "\nApellido: " + apellido + "\nSueldo: " + sueldo + " €" + "\nFecha de Contratacacion: " + fechaContratacion.getTime() + "\n---------------------------------------------------------");
 
     }
 
